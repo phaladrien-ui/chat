@@ -1,6 +1,4 @@
-Voici le README propre et simple, en français :
-
----
+Voici le README corrigé avec cette précision :
 
 ```markdown
 # Chatbot IA
@@ -32,32 +30,34 @@ Application de chat avec intelligence artificielle, authentification GitHub, his
 
 4. **Configurer les variables d'environnement**
 
-   Crée un fichier `.env` à la racine du projet avec :
+   Le fichier `.env.example` est un modèle. **Ne mets pas tes vraies clés dedans.** Crée un nouveau fichier `.env` à la racine du projet et copie ceci dedans :
 
    ```env
    DEEPSEEK_API_KEY=ta_clé_api_deepseek
-   NUXT_SESSION_PASSWORD=un_mot_de_passe_long_d_au_moins_32_caracteres
+   NUXT_SESSION_PASSWORD=colle_le_resultat_de_la_commande_ci_dessous
    ```
 
-   > Pour DeepSeek : crée un compte sur [platform.deepseek.com](https://platform.deepseek.com) et génère une clé API.
+   > **DeepSeek :** crée un compte sur [platform.deepseek.com](https://platform.deepseek.com) et génère une clé API.
    >
-   > Pour le mot de passe de session : invente une phrase longue (ex: `mon-super-chatbot-secret-123456789`).
+   > **Mot de passe de session :** génère une clé de 32 caractères avec la commande adaptée à ton système :
+   >
+   > **Windows :**
+   > ```powershell
+   > [System.Convert]::ToBase64String([System.Security.Cryptography.RandomNumberGenerator]::GetBytes(24))
+   > ```
+   >
+   > **Mac/Linux :**
+   > ```bash
+   > openssl rand -base64 24
+   > ```
 
-5. **Créer la base de données**
+5. **Lancer le projet**
 
    ```bash
    npx nuxt dev
    ```
 
-   Le premier lancement crée automatiquement la base de données SQLite.
-
-## Lancer le projet
-
-```bash
-npx nuxt dev
-```
-
-Ouvre `http://localhost:3000` dans ton navigateur.
+   Ouvre `http://localhost:3000` dans ton navigateur. La base de données se crée automatiquement au premier lancement.
 
 ## Authentification GitHub (optionnel)
 
@@ -65,7 +65,7 @@ Pour activer la connexion avec GitHub :
 
 1. Va sur [GitHub Settings > Developer settings > OAuth Apps](https://github.com/settings/developers)
 2. Crée une nouvelle application avec l'URL de callback : `http://localhost:3000/auth/github/callback`
-3. Ajoute dans le `.env` :
+3. Ajoute ces lignes dans ton fichier `.env` :
 
 ```env
 NUXT_OAUTH_GITHUB_CLIENT_ID=ton_client_id
@@ -84,5 +84,3 @@ Le dossier `.output` contient l'application prête à être déployée sur n'imp
 
 Fait avec ❤️ et Nuxt
 ```
-
----
