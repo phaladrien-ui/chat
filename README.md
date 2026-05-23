@@ -1,4 +1,4 @@
-Voici le README corrigé avec cette précision :
+Ok, compris ! C'est un message personnel de toi à ton ami. Voici :
 
 ```markdown
 # Chatbot IA
@@ -30,14 +30,14 @@ Application de chat avec intelligence artificielle, authentification GitHub, his
 
 4. **Configurer les variables d'environnement**
 
-   Le fichier `.env.example` est un modèle. **Ne mets pas tes vraies clés dedans.** Crée un nouveau fichier `.env` à la racine du projet et copie ceci dedans :
+   Le fichier `.env.example` est un modèle. Crée un nouveau fichier `.env` à la racine du projet et copie ceci dedans :
 
    ```env
-   DEEPSEEK_API_KEY=ta_clé_api_deepseek
+   DEEPSEEK_API_KEY=demande-moi_la_clé
    NUXT_SESSION_PASSWORD=colle_le_resultat_de_la_commande_ci_dessous
    ```
 
-   > **DeepSeek :** crée un compte sur [platform.deepseek.com](https://platform.deepseek.com) et génère une clé API.
+   > **Clé API :** demande-moi la clé, je te la donnerai.
    >
    > **Mot de passe de session :** génère une clé de 32 caractères avec la commande adaptée à ton système :
    >
